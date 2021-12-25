@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+</head>
+<body>
+    
+    <div class="container" style="padding: 10px;">
+        <p>Admin</p>
+        <div class="messageS1" id="messageS1"></div>
+        <form onsubmit="sendMessage1()" id="chatForm1">
+            <input type="text" name="message1" id="message1" class="message1">
+            <button class="sendBtn1" style="color: white; font-weight: bold;">Kirim</button>
+        </form>
+    </div>
+
+
+    <div class="container" style="padding: 10px;">
+        <p>Customer</p>
+        <div class="messageS2" id="messageS2"></div>
+
+        <form onsubmit="sendMessage2()" id="chatForm2">
+            <input type="text" name="message2" id="message2" class="message2">
+            <button class="sendBtn2" style="color: white; font-weight: bold;">Kirim</button>
+        </form>
+    </div>
+
+</body>
+<style>
+    .sendBtn1,
+.sendBtn2 {
+    background-color: royalblue;
+    height: 45px;
+    width: 80px;
+    display: table-cell;
+    align-content: center;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+.message1,
+.message2 {
+    display: table-cell;
+    height: 40px;
+    border: none;
+    width: 90%;
+}
+
+.container {
+    display: table;
+    padding: 5px;
+    width: 400px;
+    float: left;
+}
+
+.messageS1,
+.messageS2 {
+    border: 1px solid;
+    height: 300px;
+    width: 406px;
+    margin-bottom: 10px;
+    overflow: scroll;
+    scroll-behavior: auto;
+}
+
+.fa {
+    font-size: 18px;
+}
+
+input[type=text]{
+	padding: 10px;
+	width: 300px;
+    height: 22px;
+	border: 1px solid;
+	font-size: 16px;
+}
+input[type=text]:disabled{
+	background-color: white;
+}
+</style>
+
+<script>
+var form1 = document.getElementById("chatForm1");
+var form2 = document.getElementById("chatForm2");
+
+var accessMsg1 = document.getElementById('message1');
+var accessMsg2 = document.getElementById('message2');
+
+
+var displayMsg1 = document.getElementById('messageS1');
+var displayMsg2 = document.getElementById('messageS2');
+
+var mesValue1 = 'You: ' + accessMsg1.value;
+var mesValue2 = 'You: ' + accessMsg2.value;
+
+
+function handleForm(event) {
+    event.preventDefault();
+}
+form1.addEventListener('submit', handleForm);
+form2.addEventListener('submit', handleForm);
+
+function sendMessage1() {
+    displayMsg1.innerHTML += 'You: ' + accessMsg1.value + "<br>";
+    displayMsg2.innerHTML += 'He: ' + accessMsg1.value + "<br>";
+    scrollToBottom('messageS1');
+    form1.reset();
+}
+
+function sendMessage2() {
+    displayMsg1.innerHTML += 'He: ' + accessMsg2.value + "<br>";
+    displayMsg2.innerHTML += 'You: ' + accessMsg2.value + "<br>";
+    scrollToBottom('messageS2');
+
+    form2.reset();
+}
+
+function scrollToBottom(id) {
+    var div = document.getElementById(id);
+    div.scrollTop = div.scrollHeight - div.clientHeight;
+}
+</script>
+</html>
