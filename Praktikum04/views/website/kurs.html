@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Responsive Admin Dashboard Template">
+        <meta name="keywords" content="admin,dashboard">
+        <meta name="author" content="@afghanhnf">
+        
+        <!-- Title -->
+        <title>Praktikum Pemrograman Web</title>
+
+        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+        <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+
+        <link href="../../assets/css/connect.min.css" rel="stylesheet">
+        <link href="../../assets/css/custom.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class='loader'>
+            <div class='spinner-grow text-primary' role='status'>
+                <span class='sr-only'>Loading...</span>
+            </div>
+        </div>
+        <div class="connect-container align-content-stretch d-flex flex-wrap">
+            <div class="page-sidebar">
+                <div class="logo-box"><a href="#" class="logo-text">Praktikum</a><a href="#" id="sidebar-close"><i class="material-icons">close</i></a> <a href="#" id="sidebar-state"><i class="material-icons">adjust</i><i class="material-icons compact-sidebar-icon">panorama_fish_eye</i></a></div>
+                <div class="page-sidebar-inner slimscroll">
+                    <ul class="accordion-menu">
+                        <li class="sidebar-title">
+                            Halaman
+                        </li>
+                        <li class="active-page">
+                            <a href="index.html" class="active"><i class="material-icons-outlined">paid</i>Kurs Rupiah</a>
+                        </li>
+                        <li>
+                            <a href="chat.html"><i class="material-icons-outlined">feedback</i>Chat Massage</a>
+                        </li>
+                        <li>
+                            <a href="image.html"><i class="material-icons-outlined">account_circle</i>Image Picker</a>
+                        </li>
+                        <li>
+                            <a href="form.html"><i class="material-icons">list</i>Form Validation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-container">
+                <div class="page-header">
+                    <nav class="navbar navbar-expand">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <ul class="navbar-nav">
+                            <li class="nav-item small-screens-sidebar-link">
+                                <a href="#" class="nav-link"><i class="material-icons-outlined">menu</i></a>
+                            </li>
+                            <li class="nav-item nav-profile dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Afghan Hanif Adiyat </span><i class="material-icons dropdown-icon">keyboard_arrow_down</i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Switch Account</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Log out</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><i class="material-icons-outlined">mail</i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><i class="material-icons-outlined">notifications</i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="page-content">
+                    <div class="page-info">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Halaman</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Kurs Rupiah</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="main-wrapper">
+                        <div class="row">
+                            <div class="col-xl">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form class="needs-validation" name="form">
+                                            <div class="form-row">
+                                                <div class="col-md-4 mb-3">
+                                                    <label>Nilai Mata Uang</label>
+                                                    <input type="text" name="nilai" class="form-control" placeholder="Nilai Mata Uang">
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label>Last name</label><br>
+                                                    <select name="uangasing" onchange="konversiuang()" style="padding: 13px;
+                                                    width: 100%; border-radius: 100px; border: 2px solid #e8e8e8;">
+                                                        <option value="pilih">-- Pilih Mata Uang Asing --</option>
+                                                        <option value="USD">United State Dollar</option>
+                                                        <option value="SGD">Singapore Dollar</option>
+                                                        <option value="RM">Ringgit Malaysia</option>
+                                                        <option value="YJ">Yen Jepan</option>
+                                                        <option value="ER">EURO</option>
+                                                        <option value="RAS">Riyal Arab Saudi</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label>Nilai Rupiah</label>
+                                                    <input type="text" name="kurs" class="form-control" id="rupiah" placeholder="Nilai Rupiah">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Javascripts -->
+        <script src="../../assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+        <script src="../../assets/plugins/bootstrap/popper.min.js"></script>
+        <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../../assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+        <script src="../../assets/plugins/apexcharts/dist/apexcharts.min.js"></script>
+        <script src="../../assets/plugins/blockui/jquery.blockUI.js"></script>
+        <script src="../../assets/plugins/flot/jquery.flot.min.js"></script>
+        <script src="../../assets/plugins/flot/jquery.flot.time.min.js"></script>
+        <script src="../../assets/plugins/flot/jquery.flot.symbol.min.js"></script>
+        <script src="../../assets/plugins/flot/jquery.flot.resize.min.js"></script>
+        <script src="../../assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
+        <script src="../../assets/js/connect.min.js"></script>
+        <script src="../../assets/js/pages/dashboard.js"></script>
+
+        <script>
+
+            function konversiuang() {
+                var input = (document.form.nilai.value);
+                var hitunguang = (document.form.uangasing.value);
+                
+                var rupiah = 0;
+            
+                if(hitunguang == "USD"){
+                    rupiah = input*9915;
+                }
+                else if(hitunguang == "SGD"){
+                    rupiah = input*13472;
+                }
+                else if(hitunguang == "RM"){
+                    rupiah = input*874;
+                }
+                else if(hitunguang == "YJ"){
+                    rupiah = input*120;
+                }
+                else if(hitunguang == "ER"){
+                    rupiah = input*15888;
+                }
+                else if(hitunguang == "RAS"){
+                    rupiah = input*3592;
+                }
+                else{
+                    rupiah = 0;
+                }
+            
+                document.form.kurs.value=eval(rupiah);
+        
+            var rupiah = document.getElementById('rupiah');
+            rupiah.addEventListener('keyup', function(e){
+                rupiah.value = formatRupiah(this.value, 'Rp. ');
+            });
+     
+            /* Fungsi formatRupiah */
+            function formatRupiah(rupiah, prefix){
+                var number_string = rupiah.replace(/[^,\d]/g, '').toString(),
+                split   		= number_string.split(','),
+                sisa     		= split[0].length % 3,
+                rupiah     		= split[0].substr(0, sisa),
+                ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+     
+                // tambahkan titik jika yang di input sudah menjadi angka ribuan
+                if(ribuan){
+                    separator = sisa ? '.' : '';
+                    rupiah += separator + ribuan.join('.');
+                }
+     
+                rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+                return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+            }
+        }
+        </script>
+    </body>
+</html>
