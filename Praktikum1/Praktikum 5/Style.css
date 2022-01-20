@@ -1,0 +1,99 @@
+body {
+    height: 100%; 
+    background-color: white; 
+    max-width: 1200px !important; 
+    font-size: 14px; 
+    font-size: 0.875rem; 
+    font-family: "Poppins" !important; 
+    color: #444; 
+    margin: 0px !important;
+}
+
+h1 {font-size: 30px;}
+h1, h2, h3, h4, h5, h6 {-webkit-font-smoothing:antialiased; color:#333;}
+h3 {font-size:22px;}
+h4 {font-size: 18px;}
+
+h1, h2, h3 {margin-top: 5px;margin-bottom: 5px;}
+
+		/* width */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888;
+			border-radius: 100px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #c0c0c0;
+		}
+
+        .red{
+            background-color: brown;
+        }
+    
+        .aqua{
+            background-color: cadetblue;
+        }
+    
+        .yellow{
+            background-color: yellow;
+        }
+    
+        .black{
+            background-color: black;
+        }
+.box{
+    width: 300px;
+    height: 500px;
+}
+
+.box1{
+    width: 1200px;
+    height: 100px;
+}
+
+.box2{
+    width: 400px;
+    height: 100px;
+}
+
+.box3{
+    width: 790px;
+    height: 100px;
+}
+
+.box4{
+    width: 290px;
+    height: 400px;
+}
+
+.box5{
+    width: 600px;
+    height: 400px;
+}
+
+.box6{
+    width: 290px;
+    height: 100px;
+}
+
+.box7{
+    width: 900px;
+    height: 100px;
+}
+
+.display{
+    display: inline-flex;
+}
+
+

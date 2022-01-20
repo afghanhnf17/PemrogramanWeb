@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cart Afghan Hanif Adiyat SI-17">
+	<meta name="author" content="@afghanhnf">
+    <title>TugasPraktikum3.2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body style="height: 100%; background-color: white; max-width: 1400px !important; font-size: 14px; font-size: 0.875rem; font-family: Poppins, Helvetica, sans-serif; color: #444; margin: 0px !important;">
+    <header>
+        <div class="header" style="background-color: white; padding: 30px 50px 30px 50px; display:grid; 
+        grid-template-columns: 100%; box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 5%);">
+            <p style="text-align: center; margin-bottom: auto; margin-top: auto;">
+                <a href="" style="text-decoration: none;">Home |</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="" style="text-decoration: none;">Generate Link |</a>&nbsp; &nbsp; &nbsp; &nbsp; 
+                <a href="" style="text-decoration: none;">Transaction History |</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="" style="text-decoration: none;">Policy |</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="" style="text-decoration: none;">Logout</a>&nbsp; &nbsp; &nbsp; &nbsp;
+            </p>
+        </div>
+    </header>
+    <section style="padding: 0% 4% 5% 4%;">
+        <div class="CartTable" style="display:grid; grid-template-columns: 25% 75%; margin-top: 50px;">
+            <div class="Image" style="padding-right: 20px;">
+                <p style="padding-top: 20px; display: inline-flex;">
+                    <img src="img/sweater.png" style="width: 100%;"/></p>
+                <hr style="width: 95%; margin-left: 0px;">
+                <p>Click on the "Choose File" button to upload Image :</p>
+                <form action="">
+                    <input type="file" id="myFile" name="filename">
+                </form>
+            </div>
+
+            <div class="Form" style="padding-left: 20px;">
+                <fieldset style="border-radius: 10px;">
+                    <legend style="font-weight: bold; font-size: 16px;">Form Information</legend>
+                    <ul style="list-style-type: none;">
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-name">Title Here </label> 
+                            <input type="text" name="customername" id="form-name" style="padding: 5px;">
+                        </li>
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-address">Description </label> 
+                            <textarea name="instructions" rows="5" cols="50" maxlength="500" id="form-story" placeholder="No more than 400 characters long"></textarea></li>
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-tel">Account Number </label> 
+                            <input type="text" name="Account" id="form-tel" style="padding: 5px;"></li>
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-email">Bank </label> 
+                            <select name="cars" id="cars" form="carform" style="padding: 5px;">
+                                <option value="volvo">HBSC</option>
+                                <option value="saab">BCA</option>
+                                <option value="opel">BRI</option>
+                                <option value="audi">BNI</option>
+                              </select></li>
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-email">Account Holder </label> 
+                            <input type="Account" name="email" id="form-email" style="padding: 5px;"></li>
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-email">Transaction </label>
+                            <div class="form">
+                                <select name="cars" id="cars" form="carform" style="padding: 5px;">
+                                    <option value="volvo">1</option>
+                                    <option value="saab">2</option>
+                                    <option value="opel">3</option>
+                                    <option value="audi">4</option>
+                                  </select>
+                                  <p style="margin-bottom: 5px; margin-top: 5px;">*If the Transaction is for 3 person, choose 3 form the drop-down list</p>
+                                  <form>
+                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                    <label for="vehicle1" style="color: #76c99f; font-weight: bold;"> Send To Mobile Phone</label><br>
+                                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                    <label for="vehicle2" style="color: #76c99f; font-weight: bold;"> Send To Email</label>
+                                  </form>
+                            </div>
+                        </li> 
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-email">Send To Mobile Phone </label> 
+                            <input type="phone" name="phone" id="form-email" style="padding: 5px;"></li>
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 25% 70%;">
+                            <label for="form-email">Send To Email </label> 
+                            <input type="email" name="email" id="form-email" style="padding: 5px;"></li>
+                        <li style="margin-bottom: 10px; display:grid; grid-template-columns: 95%; margin-top: 20px; justify-items: end;">
+                            <input type="button" onclick="alert('Submit Form!')" value="Generate Link" 
+                            style="padding: 10px; font-family: 'Poppins'; border: none; font-weight: bold; color: white; background-color: #53b6df; border-radius: 10px;
+                            ">
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: #14121d; padding: 15px 50px 10px 50px; box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 5%);
+    bottom: 0px; width: -webkit-fill-available; color: white;">
+        <div class="footer" style="display:grid; 
+        grid-template-columns: 25% 50% 25%;">
+                        <h2 style="font-weight: bold;">Markit</h3>
+                        <p style="text-align: center; margin-bottom: auto; margin-top: auto;">
+                            <a href="" style="text-decoration: none; color: white;">Home</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="" style="text-decoration: none; color: white;">Cart</a>&nbsp; &nbsp; &nbsp; &nbsp; 
+                            <a href="" style="text-decoration: none; color: white;">Checkout</a>&nbsp; 
+                        </p>
+                        <div class="form" style="text-align: end;">
+                            <p style="margin-bottom: 5px;">Stay In Touch Join Our Newsletter</p>
+                        </div>
+        </div>
+        <hr style="color: white; margin-top: 10px;">
+        <div class="footer" style="display:grid; 
+        grid-template-columns: 100%;">
+            <p style="font-weight: 500; text-align: center;">Copyright © 2021 Tugas Pemrograman Web, Design by <a href="https://www.instagram.com/afghanhnf/" target="_blank" 
+                style="text-decoration: none; color: #14121d; background-color: white; padding: 5px 10px 5px 10px; border-radius: 10px;">afghanhnf</a></p>
+        </div>
+    </footer>
+</body>
+</html>

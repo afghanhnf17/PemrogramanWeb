@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 6.3</title>
+</head>
+<body>
+    
+    <header style="text-align: center;">Header</header>
+
+    <div id="main">
+    <aside style="text-align: center;">Aside</aside>
+    <article style="text-align: center;">Article
+        <div class="flex-container">
+            <div><img src="assets/depok.png" alt=""></div>
+            <div><img src="assets/depok.png" alt=""></div>
+            <div><img src="assets/depok.png" alt=""></div>  
+        </div>
+    </article>
+    </div>
+
+    <footer style="text-align: center;">Footer</footer>
+
+</body>
+
+<style>
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    }
+    #main {
+    display: flex;
+    flex: 1;
+    margin: 10px;
+    }
+    #main > aside {
+    flex: 1;
+    order: 1;
+    background: pink;
+    }
+    #main > nav,
+    #main > article {
+    flex: 0 0 80vw;
+    }
+    #main > nav {
+    background: #03DAC5;;
+    order: 3;
+    }
+    #main > article {
+
+    order: 2;
+    }
+    header, footer {
+    background: khaki;
+    height: 20vh;
+    }
+    header, footer, article, nav, aside {
+    padding: 1em;
+    margin: 10px;
+    }
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    
+    .flex-container > div {
+      background-color: #f1f1f1;
+      width: 100%;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    img {
+        width: 100%;
+    }
+</style>
+</html>

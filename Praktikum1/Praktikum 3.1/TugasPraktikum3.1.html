@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cart Afghan Hanif Adiyat SI-17">
+	<meta name="author" content="@afghanhnf">
+    <title>Pesan Pizza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body style="height: 100%; background-color: white; max-width: 1400px !important; font-size: 14px; font-size: 0.875rem; font-family: Poppins, Helvetica, sans-serif; color: #444; margin: 0px !important;">
+    <header>
+        <div class="header" style="background-color: white; padding: 15px 50px 10px 50px; display:grid; 
+        grid-template-columns: 25% 50% 25%; box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 5%);">
+            <p style="font-weight: bold;"><img src="img/logo.png" style="width: 40%;"/></p>
+            <p style="text-align: center; margin-bottom: auto; margin-top: auto;">
+                <a href="" style="text-decoration: none;">Form Pemesanan Pizza</a>
+            </p>
+            <p style="text-align: end; margin-top: auto; margin-bottom: auto;">
+                <span><img src="img/search.png" style="width: 25px;"/></span> &nbsp;
+                <span style="display: inline-flex;"><img src="img/cart.png" style="width: 25px;"/> &nbsp; <strong style="font-weight: bold; font-size: 12px;">1</strong></span> &nbsp;
+            </p>
+        </div>
+    </header>
+
+    <section style="padding: 2% 4% 5% 4%;">
+        <h1 style="font-weight: bold; margin-bottom: 0px;">Blackstone Bistro | Pizza-on-Demand</h1>
+        <p style="margin-top: 0px;">Our 12" wood-fired pizzas are avaiable for delivery. Build your custom pizza and we'll deliver it within an hour.</p>
+
+        <form action="http://www.blackgoosebistro.com/pizza.php" method="post">
+            <fieldset style="border-radius: 10px;">
+                <legend style="font-weight: bold; font-size: 16px;">Your Information</legend>
+                <ul style="list-style-type: none;">
+                    <li style="margin-bottom: 10px; display:grid; grid-template-columns: 13% 80%;">
+                        <label for="form-name">Name </label> <input type="text" name="customername" id="form-name" style="padding: 5px;">
+                    </li>
+                    <li style="margin-bottom: 10px; display:grid; grid-template-columns: 13% 80%;">
+                        <label for="form-address">Address </label> <input type="text" name="address" id="form-address" style="padding: 5px;"></li>
+                    <li style="margin-bottom: 10px; display:grid; grid-template-columns: 13% 80%;">
+                        <label for="form-tel">Telephone Number </label> <input type="tel" name="telephone" id="form-tel" style="padding: 5px;"></li>
+                    <li style="margin-bottom: 10px; display:grid; grid-template-columns: 13% 80%;">
+                        <label for="form-email">Email </label> <input type="email" name="email" id="form-email" style="padding: 5px;"></li>
+                    <li style="margin-bottom: 10px;">Delivery instructions <br>
+                    <textarea name="instructions" rows="4" cols="145" maxlength="400" id="form-story" placeholder="No more than 400 characters long"></textarea></li>
+                </ul>
+            </fieldset>
+        
+        <h2>Design your dream pizza :</h2>
+
+        <fieldset style="border-radius: 10px;">
+        <legend style="font-weight: bold; font-size: 16px;">Pizza specs</legend><fieldset style="border-radius: 10px; margin-top: 10px;">
+        <legend style="font-weight: bold; font-size: 16px;">Crust <em>(Choose one)</em></legend>
+          <ul style="list-style-type: none;">
+            <li><label><input type="radio" name="crust" value="white"> Classic white </label></li>
+            <li><input type="radio" name="crust" value="multigrain"> Multigrain</li>
+            <li><input type="radio" name="crust" value="cheese crust"> Cheese-stuffed crust</li>
+            <li><input type="radio" name="crust" value="gluten free"> Gluten-free</li>
+          </ul>
+        </fieldset>
+        
+        <fieldset style="border-radius: 10px; margin-top: 15px;">
+        <legend style="font-weight: bold; font-size: 16px;">Toppings <em>(Choose as many as you want)</em></legend>
+        <ul style="list-style-type: none;">
+            <li><input type="checkbox" name="toppings[]" value="red sauce" checked> Red sauce</li>
+            <li><input type="checkbox" name="toppings[]" value="white sauce"> White sauce</li>
+            <li><input type="checkbox" name="toppings[]" value="mozzarella"> Mozzarella Cheese</li>
+            <li><input type="checkbox" name="toppings[]" value="pepperoni"> Pepperoni</li>
+            <li><input type="checkbox" name="toppings[]" value="mushrooms"> Mushrooms</li>
+            <li><input type="checkbox" name="toppings[]" value="peppers"> Peppers</li>
+            <li><input type="checkbox" name="toppings[]" value="anchovies"> Anchovies</li>
+        </ul>
+        </fieldset>
+        
+        <fieldset style="border-radius: 10px; margin-top: 15px;">
+        <legend style="font-weight: bold; font-size: 16px;">Number</legend>
+        <p>How many pizzas  
+            &nbsp; &nbsp; &nbsp; &nbsp; <select name="pizzas" size="1" style="padding: 10px; border-radius: 5px;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            </select>
+        </p></fieldset>
+        
+        </fieldset>
+        <p><input type="submit" value="Bring me a pizza!" style="padding: 10px 20px 10px 20px;  border: none; background: #76c99f;
+            color: white; font-weight: bold; font-family: poppins; border: 5px;">
+        <input type="reset" style="padding: 10px 20px 10px 20px; border: none; background: brown;
+        color: white; font-weight: bold; font-family: poppins; border: 5px;"></p>
+        </form>
+    </section>
+    <footer style="background-color: #14121d; padding: 15px 50px 10px 50px; box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 5%);
+    bottom: 0px; width: -webkit-fill-available; color: white;">
+        <div class="footer" style="display:grid; 
+        grid-template-columns: 25% 50% 25%;">
+                        <h2 style="font-weight: bold;">Markit</h3>
+                        <p style="text-align: center; margin-bottom: auto; margin-top: auto;">
+                            <a href="" style="text-decoration: none; color: white;">Form Pemesanan Pizza</a>
+                        </p>
+                        <div class="form" style="text-align: end;">
+                            <p style="margin-bottom: 5px;">Stay In Touch Join Our Newsletter</p>
+                            <div class="form"style="display:grid; 
+                            grid-template-columns: 20% 50% 30%;">
+                            <p></p>
+                                <input type="text" placeholder="Email address" name="mail" required>
+                                <input type="submit" value="Subscribe">
+                            </div>
+                        </div>
+        </div>
+        <hr style="color: white; margin-top: 10px;">
+        <div class="footer" style="display:grid; 
+        grid-template-columns: 100%;">
+            <p style="font-weight: 500; text-align: center;">Copyright © 2021 Tugas Pemrograman Web, Design by <a href="https://www.instagram.com/afghanhnf/" target="_blank" 
+                style="text-decoration: none; color: #14121d; background-color: white; padding: 5px 10px 5px 10px; border-radius: 10px;">afghanhnf</a></p>
+        </div>
+    </footer>
+</body>
+</html>

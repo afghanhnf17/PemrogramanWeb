@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkir Kendaraan</title>
+</head>
+<body>
+<div>   
+	<table>
+		<thead>
+			<tr>
+				<th style="color: white;">Menghitung Biaya Parkir</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Jam Masuk</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="JamMasuk"></td>
+			</tr>
+            <tr>
+				<td>Jam Keluar</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="JamKeluar"></td>
+			</tr>
+			<tr>
+				<td><button onclick="hitung()">Hitung</button></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Total Pembayaran</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="hasil" disabled></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+</body>
+<style>
+    div	{
+	margin: auto ;
+	width: 400px;
+	margin-top: 100px;
+}
+table {
+	border-style: none;
+	border-collapse: collapse;
+	width: 100%;
+}
+th{
+	background-color: #f44336;
+	padding: 5px;
+	border: none;
+	font-size: 16px;
+}
+td{
+	border: none;
+}
+input[type=text]{
+	padding: 10px;
+	width: 380px;
+	border-style: solid;
+	border-color: #6d6e6a;
+	font-size: 16px;
+}
+input[type=text]:disabled{
+	background-color: white;
+}
+button {
+	width: 100%;
+	height: 40px;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+
+const JamPertama = 3000;
+const JamKedua = 1000;
+var JamMasuk;
+var JamKeluar;
+var Lama;
+var Biaya;
+
+function hitung() {
+	JamMasuk = parseFloat(document.getElementById("JamMasuk").value);
+    JamKeluar = parseFloat(document.getElementById("JamKeluar").value);
+	Lama = JamKeluar - JamMasuk;
+    
+    if(Lama == 2){
+		Biaya = JamPertama;
+	}
+    else if(Lama > 2){
+		Biaya = JamPertama + (JamKedua * (Lama - 2));
+	}
+	else{
+		hasil = 0;
+	}
+
+	document.getElementById('hasil').value = Biaya;    
+}
+
+</script>
+</html>
+
+</body>
+</html>

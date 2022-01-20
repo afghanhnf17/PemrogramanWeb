@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 6.2</title>
+</head>
+<body>
+    <div class="mainmenu">
+        <div id="main">
+            <nav>Nav</nav>
+        </div>
+
+        <div id="main2">
+            <header>Header</header>
+            <div class="isi" style="display: flex; flex-wrap: nowrap;">
+                <article>Article</article>
+                <aside>Aside</aside>
+            </div>
+            <footer>Footer</foter>
+        </div>
+    </div>
+
+
+
+
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        margin: 0;
+    }
+    .mainmenu {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #main {
+        display: flex;
+        flex: 1;
+    }
+    #main2 {
+        flex: 0 0 80vw;
+    }
+    #main2 > .isi > article {
+    flex: 1;
+    order: 1;
+    padding: 120px;
+    }
+    #main2 > .isi > aside {
+    background: pink;
+    order: 2;
+    padding: 120px;
+    }
+    #main > nav {
+    flex: 0 0 20vw;
+    }
+    #main > nav {
+    background: #03DAC5;;
+    order: 2;
+    }
+    header, footer {
+    background: khaki;
+    height: 20vh;
+    }
+    header, footer, article, nav, aside {
+    padding: 1em;
+    order: 1;
+    }
+</style>
+
+</html>
